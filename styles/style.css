@@ -124,6 +124,7 @@
   transition: box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
+  border: 2px solid #000;
 }
 
 .button:hover {
