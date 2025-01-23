@@ -76,6 +76,7 @@
 
 .card__image-label {
   position: absolute;
+  z-index: 2;
   top: 25px;
   right: 25px;
   mix-blend-mode: hard-light;
@@ -244,12 +245,12 @@ dialog::backdrop {
   filter: blur(2px) hue-rotate(290deg);
 }
 
-.card__image-label:has( + .filter-combo) {
-  z-index: 2;
-}
-
 .filter-soft-invert {
   filter: invert(100%) saturate(70%);
+}
+
+.card__image-label:has( + .filter-soft-invert) {
+  mix-blend-mode: difference;
 }
 
 .filter-contrast {
