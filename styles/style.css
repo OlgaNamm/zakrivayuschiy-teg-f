@@ -264,6 +264,10 @@ dialog::backdrop {
   filter: sepia(80%);
 }
 
+.filter-hue {
+  filter: hue-rotate(45deg)
+}
+
 
 @media (width <= 376px) {
   .header {
