@@ -233,11 +233,7 @@ dialog::backdrop {
 }
 
 .filter-opacity {
-  filter: opacity(30%);
-}
-
-.card__image-label:has( + .filter-opacity) {
-  mix-blend-mode: difference;
+  filter: opacity(60%);
 }
 
 .filter-grayscale {
