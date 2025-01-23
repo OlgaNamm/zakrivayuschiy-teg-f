@@ -183,7 +183,6 @@
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 21px;
-  mix-blend-mode: difference;
 }
 
 .button__save {
@@ -246,7 +245,7 @@ dialog::backdrop {
 }
 
 .filter-combo {
-  filter: blur(2px) hue-rotate(290deg); 
+  filter: blur(2px) hue-rotate(290deg);
 }
 
 .card__image-label:has( + .filter-combo) {
@@ -261,8 +260,8 @@ dialog::backdrop {
   filter: contrast(200%);
 }
 
-.filter-invert {
-  filter: invert(100%) sepia(80%) brightness(90%);
+.filter-sepia {
+  filter: sepia(80%);
 }
 
 

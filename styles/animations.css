@@ -38,7 +38,7 @@
 
 .contour {
   fill: var(--icon-contour);
-  transition: fill 0.1s linear; 
+  transition: fill 0.1s linear;
 }
 
 .card__icon-button:hover .main-body {
