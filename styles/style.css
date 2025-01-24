@@ -15,7 +15,7 @@
   margin: 100px auto;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font),'Helvetica', 'Arial', sans-serif;
   font-variation-settings: 'wght' var(--weight-font-main);
   background-image: 
     var(--gradient-liner-horizontal), 
@@ -35,7 +35,7 @@
   padding-block: 128px;
   background-color: #fff;
   border: 2px solid #000;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
 }
 
@@ -61,12 +61,13 @@
 }
 
 .card__title {
+  display: flex;
+  align-items: center;
   font-size: 18px;
   line-height: 21.78px;
   font-variation-settings: 'wght' var(--weight-font-title);
   padding-inline: 10px;
   padding-block: 3px;
-  min-block-size: 33px;
   border-bottom: 2px solid #000;
 }
 
@@ -81,7 +82,7 @@
   right: 25px;
   mix-blend-mode: hard-light;
   opacity: 0.5;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   text-shadow: -1px 0 var(--label-stroke-color), 0 1px var(--label-stroke-color), 1px 0 var(--label-stroke-color), 0 -1px var(--label-stroke-color);
 }
@@ -96,7 +97,7 @@
 .card__image {
   display: block;
   inline-size: 100%;
-  object-fit: contain;
+  object-fit: cover;
   aspect-ratio: 1 / 1;
 }
 
@@ -112,6 +113,7 @@
 .card__button {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding: 0 25px 25px 0;
   gap: 2px;
 }
@@ -151,16 +153,22 @@
   outline: none;
 }
 
-.button:focus-visible {
-  border: 2px solid #000;
+.button:focus-visible:not(.card__icon-button) {
   box-shadow: 2px 2px 0px 0px #000;
   outline: none;
 }
 
 .card__icon-button {
+  display: flex;
+  align-self: center;
   max-block-size: 38px;
   background-color: #fff;
   border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button::before {
+  content: none;
 }
 
 .card__icon-button:focus {
@@ -169,7 +177,6 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid #000;
-  transition: border 0.3s ease;
 }
 
 .card__like-button {
@@ -182,7 +189,7 @@
   z-index: 1;
   color: #fff;
   mix-blend-mode: difference;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   line-height: 21px;
 }
@@ -272,11 +279,6 @@ dialog::backdrop {
     padding-block: 120px;
   }
 
-  .card__title {
-    padding-top: 4px;
-    padding-bottom: 6px;
-  }
-
   .card__image-label {
     top: 22px;
     right: 12px;
@@ -299,7 +301,7 @@ dialog::backdrop {
   }
 
   .dialog[open] {
-    padding: 30px 42px;
+    padding: 32px 40px;
     max-inline-size: 341px;
   }
 
